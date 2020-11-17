@@ -89,7 +89,6 @@ class Game{
          ctx.fillStyle = color
          ctx.fillRect(x,y,this.cellWidth, this.cellWidth )
          // ctx.strokeText(`${index}`,x+this.cellWidth/2,y+this.cellWidth/2,this.cellWidth )
-
       })
       this.getGrid()
    }
@@ -97,6 +96,9 @@ class Game{
 let game = new Game(cellsAmountInRow,cellWidth)
 console.log(game.field);
 
+game.field[125] = 1
+game.field[126] = 1
+game.field[127] = 1
 
 // for (let i = 0;i<game.field.length;i++){
 //    game.field[Math.floor(Math.random()*game.field.length)] = 1
@@ -116,8 +118,6 @@ document.querySelector("html").addEventListener("click",(event)=>{
       game.field[pos] = 1
    }
    game.render()
-
-
 })
 document.querySelector("html").addEventListener("keypress",(event)=>{
    console.log(event);
