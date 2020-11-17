@@ -9,5 +9,9 @@ canvas {
     box-sizing: border-box;
     width: 100%;
     height: 100%;
+}
+.btn_rand{
+    display: block;
+    position: absolute;
 
 }

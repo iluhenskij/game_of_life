@@ -100,9 +100,6 @@ game.field[125] = 1
 game.field[126] = 1
 game.field[127] = 1
 
-// for (let i = 0;i<game.field.length;i++){
-//    game.field[Math.floor(Math.random()*game.field.length)] = 1
-// }
 
 document.querySelector("html").addEventListener("click",(event)=>{
    let x= Math.floor(event.x/game.cellWidth)
@@ -119,12 +116,19 @@ document.querySelector("html").addEventListener("click",(event)=>{
    }
    game.render()
 })
+
+
 document.querySelector("html").addEventListener("keypress",(event)=>{
    console.log(event);
    if(event.code==="Space"){
       game.isPlaying = !game.isPlaying
       console.log("changed");
    }
+})
+document.querySelector(".btn_rand").addEventListener("click",()=>{
+    for (let i = 0;i<game.field.length;i++){
+       game.field[Math.floor(Math.random()*game.field.length)] = 1
+    }
 })
 
 game.render()
