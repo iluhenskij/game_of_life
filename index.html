@@ -7,7 +7,15 @@
    <style type="text/css"></style>
 </head>
 <body>
-   <button value="Random it" class="btn_rand">Random it</button>
+   <div class="interface">
+      <button value="Pause/Start Game" class="btn_pause">Pause/Start Game</button>
+      <button value="Random it" class="btn_rand">Random it</button>
+      <label for="mapWidth">Ширина</label>
+      <input type="number" min="7" value="30" id="mapWidth">
+      <label for="mapHeight">Высота</label>
+      <input type="number" min="7" value="20" id="mapHeight">
+   </div>
+
    <canvas id="mainCanvas"></canvas>
    <script src="life.js"></script>
 </body>
